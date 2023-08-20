@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { ref, defineProps, h, onMounted } from 'vue'
-import { NSpace, NButton, NInput, NDataTable, message } from 'naive-ui'
+import { NSpace, NButton, NInput, NDataTable, message, affixProps } from 'naive-ui'
 import './index.less'
 import * as echarts from 'echarts';
 import HeatmapChart from './heatmap/index.vue'
 import * as XLSX from 'xlsx';
 import { saveAs } from 'file-saver';
+import axios from 'axios';
 
 defineProps<{ msg: string }>()
 
@@ -110,9 +111,12 @@ const getComponentType = (type) => {
 }
 
 onMounted(() => {
-  // var chartDom = document.getElementById('chart');
-  // var myChart = echarts.init(chartDom);
-  // option && myChart.setOption(option);
+  console.log('onmount')
+  axios.get('/api/showtag').then(res=>{
+    console.log('res',res)
+  }).catch(err=>{
+    console.log("err",err)
+  })
 })
 
 const downloadExcel = () => {
