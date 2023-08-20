@@ -80,7 +80,6 @@ def detect_batch(url,list_of_tuples):
         record = [] #
 
         # print('真实标签：',y_true_zh,'预测标签：',y_pred_zh)
-        #
         # res = {'txt':txt,'y_true':y_true_zh,'y_pred':y_pred_zh}
         record.append(index)
         index += 1

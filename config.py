@@ -9,7 +9,9 @@ ZH2EN= {      '财经':"finance",
               '汽车':"auto",
               '体育':"sports",
               '游戏':"game",
-              "娱乐":"entertainment"}
+              "娱乐":"entertainment",
+              '其他':'other'
+              }
 EN2NUM = {"finance":0,
               "realty":1,
               "education":2,
@@ -18,7 +20,9 @@ EN2NUM = {"finance":0,
               "auto":5,
               "sports":6,
               "game":7,
-              "entertainment":8}
+              "entertainment":8,
+                'other':9
+          }
 
 NUM2ENG= {
     0: "finance",
@@ -29,7 +33,8 @@ NUM2ENG= {
     5: "auto",
     6: "sports",
     7: "game",
-    8: "entertainment"
+    8: "entertainment",
+    9:'other'
 }
 
 ENG2ZH ={
@@ -41,5 +46,6 @@ ENG2ZH ={
         "auto": '汽车',
         "sports": '体育',
         "game": '游戏',
-        "entertainment": "娱乐"
+        "entertainment": "娱乐",
+        'other':'其他'
 }

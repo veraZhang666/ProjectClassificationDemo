@@ -1,4 +1,5 @@
-from flask import Flask,url_for,render_template,request,jsonify
+from flask import Flask,url_for,render_template,request,jsonify,send_from_directory
+
 import base64
 import json
 import sys,os
@@ -103,6 +104,14 @@ def index():
 def show_tag():
     dic = {'class':'体育'}
     return jsonify(dic)
+
+@app.route('/gettemplate')
+def get_template():
+    xlsx_file_path = os.path.join('xlsxTemplate','template.xlsx')
+    print(xlsx_file_path)
+    return send_from_directory(path=xlsx_file_path, directory='xlsxTemplate', filename='template.xlsx',
+                               as_attachment=True)
+
 
 
 
